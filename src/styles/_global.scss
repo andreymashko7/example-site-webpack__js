@@ -1,0 +1,95 @@
+@import "./vars.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Prompt";
+  margin: 0;
+  // padding: 0;
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+// Animations fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  background: #2962ef;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-flex;
+  gap: 7px;
+  transition: 0.3s all ease;
+  &:hover {
+    background: #0b45d6;
+    svg {
+      transform: translate(5px, -5px);
+      transition: 0.3s all ease;
+    }
+  }
+}
+
+.btn__outline {
+  border-radius: 4px;
+  color: $blueColor;
+  display: inline-flex;
+  transition: 0.3s all ease;
+  &:hover {
+    color: #0b45d6;
+    transition: 0.3s all ease;
+  }
+}
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+  // max-width: 1160px;
+  // padding: 0px 40px;
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// .section__title
+.section__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $primaryColor;
+}
+// .section__subtitle
+.section__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $secondaryColor;
+  margin-top: 15px;
+}

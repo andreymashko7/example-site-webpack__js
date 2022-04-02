@@ -1,0 +1,25 @@
+.section {
+  // .section__trusted
+  &__trusted {
+    background: #faf9fa;
+    padding: 50px 0px;
+  }
+}
+.trusted {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  column-gap: 65px;
+  justify-content: center;
+  align-items: center;
+  // .trusted__title
+  &__title {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+  // .trusted__item
+  &__item {
+    margin-top: 40px;
+  }
+}
